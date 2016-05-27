@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,44 +19,102 @@
     <![endif]-->
   </head>
   <body>
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div id="first" class="container-fluid">
+
+    </div>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
     <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      </ol>
+            <ol class="carousel-indicators">
+              <li id="a0" data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li id="a1" data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li id="a2" data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li id="a3" data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+      <span id="data-active" class="sr-only">0</span>
 
       <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="..." alt="...">
+      <div class="carousel-inner" role="list">
+        <div id="thumbnail0" class="thumb item active">
+          
+          <!--<img src="Jellyfish.jpg" alt="...">-->
           <div class="carousel-caption">
             ...
           </div>
         </div>
-        <div class="item">
-          <img src="..." alt="...">
+        <div id="thumbnail1" class="thumb item">
           <div class="carousel-caption">
-            ...
+            
           </div>
         </div>
-        ...
+        <div id="thumbnail2" class="thumb item">
+          
+          <div class="carousel-caption">
+            
+          </div>
+        </div>
+        <div id="thumbnail3" class="thumb item">
+          
+          <div class="carousel-caption">
+            
+          </div>
+        </div>
       </div>
 
       <!-- Controls -->
-      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-  </div>
+    </div>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center text-primary"><u>Start your Alaska vacation before your ship even sails.</u></h2>
+          <div class="col-xs-12 col-sm-6">
+            <div class="bg-primary">
+              <h3>WHAT'S INCLUDED</h3>
+              <ul>
+                <li>3 nights in the luxurious Fairmont Olympic Hotel, with breakfasts.</li>
+                <li>Full-day, fully guided, city-highlights tour with lunch.</li>
+                <li>Half-day, fully guided tour and farewell dinner at a local favorite restaurant.</li>
+                <li>Celebrity Cruises Hospitality Desk in your hotel.</li>
+                <li>All airport and seaport transfers.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="bg-primary">
+              <h3>HOW TO BOOK</h3>
+              <ul>
+                <li>First, book your cruise.</li>
+                <li>Then, simply add your City Stay package when you manage your reservation.</li>
+                <li>Or Call us at 1-800-647-2251, or contact your travel agent.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      /*$(".carousel-indicators li").click(function(){
+         $("#carousel-example-generic").carousel(1);
+          $("#carousel-example-generic").carousel(2);
+        $("#carousel-example-generic").carousel(3);
+      });
+        /*$(".carousel-indicators li").click(function(){
+          //$("#carousel-example-generic").carousel("prev");
+          var active = parseInt($("#data-active")[0].innerHTML);
+          var currentActive = parseInt(this.id);
+          if((active<currentActive)&&(active+1<currentActive)){
+            $("#carousel-example-generic").carousel({duration: 10});
+            while(active<currentActive){
+              active++;
+              $("#carousel-example-generic").carousel(active);
+              //setTimeout(active++,100);
+            }
+          }
+          $("#data-active")[0].innerHTML = active;
+        });*/
+    </script>
   </body>
 </html>

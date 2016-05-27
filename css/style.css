@@ -1,0 +1,66 @@
+#first{
+	background: url(../img/first.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height:100vh;
+}
+
+#carousel-example-generic div.carousel-inner div.thumb.item{
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
+
+#thumbnail0{
+	background: url(../img/thumbnail-1.jpg);
+	
+}
+
+#thumbnail1{
+	background: url(../img/thumbnail-2.jpg);
+	
+}
+
+#thumbnail2{
+	background: url(../img/thumbnail-3.jpg);
+	
+}
+
+#thumbnail3{
+	background: url(../img/thumbnail-4.jpg);
+	
+}
+
+#a3{
+	background: url(../img/ship.png)center center;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height: 30px;
+	width: 30px;
+	border-width: 0;
+}
+
+ol li{
+	vertical-align: middle;
+	margin-right: 15px !important;
+}
+
+div.bg-primary{
+	margin-top: 20px;
+	padding: 20px;
+	font-size: 1.2em;
+}
+
+div.bg-primary h3{
+	margin: 0;
+}
+
+div.bg-primary li{
+	margin-top: 10px;
+}
