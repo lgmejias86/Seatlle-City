@@ -1,3 +1,7 @@
+h1, h2, h3{
+	color: white;
+}
+
 #first{
 	background: url(../img/first.jpg) no-repeat center center;
 	-webkit-background-size: cover;
@@ -5,6 +9,12 @@
     -o-background-size: cover;
     background-size: cover;
 	height:100vh;
+}
+
+.shadow{
+	background-color: rgba(50, 50, 50, 0.5);
+	height: 100%;
+	width: 100%;
 }
 
 #carousel-example-generic div.carousel-inner div.thumb.item{
@@ -15,9 +25,44 @@
     height: 100vh;
 }
 
+#ind{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	margin-top: 40px;
+	z-index: 15;
+}
+
+#ind h3{
+	font-size: 1.5em;
+}
+
+#ind #days{
+	margin: 0;
+}
+
+#ind #days li{
+	padding: 0;
+	margin: 4px 4px 8px 4px;
+	width: 48px;
+	color: white;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
+ol.carousel-indicators{
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	width: auto;
+}
+
 #thumbnail0{
 	background: url(../img/thumbnail-1.jpg);
-	
 }
 
 #thumbnail1{
@@ -35,7 +80,11 @@
 	
 }
 
-#a3{
+.activities{
+	top: 173px;
+}
+
+#carousel-example-generic #a3{
 	background: url(../img/ship.png)center center;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
@@ -43,12 +92,33 @@
     background-size: cover;
 	height: 30px;
 	width: 30px;
+	margin: 8px;
 	border-width: 0;
 }
 
-ol li{
+#carousel-example-generic ol li{
 	vertical-align: middle;
-	margin-right: 15px !important;
+	margin: 22px;
+	height: 12px;
+	width: 12px;
+}
+
+#thumbnail0 .row{
+	background: rgba(50, 120, 185, 0.8);
+	position: relative;
+}
+
+.day{
+	background: rgba(0, 0, 100, 0.8);
+	padding: 15px;
+}
+
+.day h2{
+	margin: 0;
+}
+
+.activities h3{
+	margin: 15px 0 30px 0; 
 }
 
 div.bg-primary{

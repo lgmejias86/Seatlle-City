@@ -19,26 +19,47 @@
     <![endif]-->
   </head>
   <body>
-    <div id="first" class="container-fluid">
-
+    <div id="first">
+      <div class="shadow container-fluid">
+      </div>
     </div>
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
-    <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li id="a0" data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li id="a1" data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li id="a2" data-target="#carousel-example-generic" data-slide-to="2"></li>
-              <li id="a3" data-target="#carousel-example-generic" data-slide-to="3"></li>
-            </ol>
-      <span id="data-active" class="sr-only">0</span>
 
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+      <div id="ind">
+          <div class="row">
+            <div class="col-xs-12">
+              <h3 class="text-center">YOUR ITINERARY</h3>
+              <!-- Indicators -->
+              <ol id="days" class="list-inline text-center">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active">Day 1</li>
+                <li data-target="#carousel-example-generic" data-slide-to="1">Day 2</li>
+                <li data-target="#carousel-example-generic" data-slide-to="2">Day 3</li>
+                <li class="text-center" data-target="#carousel-example-generic" data-slide-to="3">Day 4</li>
+              </ol>
+              <ol class="carousel-indicators">
+                <li id="a0" data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li id="a1" data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li id="a2" data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li id="a3" data-target="#carousel-example-generic" data-slide-to="3"></li>
+              </ol>
+            </div>
+          </div>
+      </div>
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="list">
         <div id="thumbnail0" class="thumb item active">
-          
-          <!--<img src="Jellyfish.jpg" alt="...">-->
-          <div class="carousel-caption">
-            ...
+          <div class="shadow">
+            <div class="row activities">
+              <div class="day col-xs-5"><h2 class="text-center">Day 1</h2></div>
+              <div class= "after-day col-xs-8"></div>
+              <div class= "col-xs-12">
+                <h3 class="text-center">Arrive in Seattle</h3>
+              </div>
+            </div>
+            <!--<img src="Jellyfish.jpg" alt="...">-->
+            <div class="carousel-caption">
+              fffffffffffffffffff
+            </div>
           </div>
         </div>
         <div id="thumbnail1" class="thumb item">
