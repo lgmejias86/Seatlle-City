@@ -1,5 +1,9 @@
-h1, h2, h3{
+h1, h2, h3 ,h4 ,p{
 	color: white;
+}
+
+body{
+	position: relative;
 }
 
 #first{
@@ -12,24 +16,84 @@ h1, h2, h3{
 }
 
 .shadow{
-	background-color: rgba(50, 50, 50, 0.5);
+	background-color: rgba(20, 20, 20, 0.7);
 	height: 100%;
 	width: 100%;
 }
 
-#carousel-example-generic div.carousel-inner div.thumb.item{
+#first .shadow.container-fluid{
+	position: relative;
+}
+
+#first .container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	margin: auto;
+	height: 30%;
+
+}
+
+#first .container>.row{
+	padding:0 20px;
+}
+
+#first .row #title{
+	border-bottom: 1px solid white;
+	padding:0 0 10px;
+}
+
+#first h1{
+	font-size: 3em;
+}
+
+#title h3{
+	font-size: 2em;
+}
+
+#first h1, #first h3{
+	margin: 0;
+}
+
+#first #info{
+	margin: 40px 0;
+	padding: 0;
+}
+
+#info h3{
+	font-size: 1.5em;
+	line-height: 1.4;
+}
+
+button{
+	color: white;
+	background-color: rgb(30, 180, 235);
+	padding: 10px 30px;
+	font-size: 1.4em;
+	border: none;
+}
+
+button:hover{
+	background-color: rgb(40, 160, 220);
+}
+
+#carousel-example-generic div.carousel-inner div.item{
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100vh;
+    min-height: 750px;
 }
 
 #ind{
 	position: absolute;
 	width: 100%;
 	height: auto;
-	margin-top: 40px;
+	margin-top: 80px;
 	z-index: 15;
 }
 
@@ -43,11 +107,17 @@ h1, h2, h3{
 
 #ind #days li{
 	padding: 0;
-	margin: 4px 4px 8px 4px;
-	width: 48px;
-	color: white;
+	margin: 3px;
+	width: 46px;
+	color: rgb(204, 204, 204);
 	font-size: 1.1em;
 	cursor: pointer;
+	text-align: center;
+	background: transparent;
+}
+
+#ind .row{
+	margin: 0; 
 }
 
 ol.carousel-indicators{
@@ -61,27 +131,59 @@ ol.carousel-indicators{
 	width: auto;
 }
 
+#carousel-example-generic .carousel-inner .item{
+	display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#carousel-example-generic .carousel-inner .active{
+	position: relative;
+	left: 0;
+}
+
 #thumbnail0{
 	background: url(../img/thumbnail-1.jpg);
 }
 
 #thumbnail1{
 	background: url(../img/thumbnail-2.jpg);
-	
 }
 
 #thumbnail2{
 	background: url(../img/thumbnail-3.jpg);
-	
 }
 
 #thumbnail3{
 	background: url(../img/thumbnail-4.jpg);
 	
 }
+@media (max-width: 767px) {
+	.activities{
+		top: 173px;
+		position: relative;
+	}
 
-.activities{
-	top: 173px;
+	#ind{
+		margin-top: 40px;
+	}
+
+	#carousel-example-generic div.carousel-inner div.item{
+		height: 100vh;
+	}
+}
+
+.join{
+	margin-top: 6px;
+	margin-left: 12px;
+	width: 50px;
+	height: 1px;
+	border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.join.last{
+	border-bottom: 1px dashed rgb(204, 204, 204);
 }
 
 #carousel-example-generic #a3{
@@ -90,22 +192,31 @@ ol.carousel-indicators{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-	height: 30px;
-	width: 30px;
-	margin: 8px;
+	height: 46px;
+	width: 46px;
+	margin: 4px 3px;
 	border-width: 0;
 }
 
 #carousel-example-generic ol li{
 	vertical-align: middle;
-	margin: 22px;
+	margin: 20px;
 	height: 12px;
 	width: 12px;
+	background-color: rgb(204, 204, 204);
+	border: none;
 }
 
-#thumbnail0 .row{
+.activities{
+	margin: 0;
+}
+
+.item .activities .row{
 	background: rgba(50, 120, 185, 0.8);
-	position: relative;
+}
+
+.not-padding{
+	padding: 0;
 }
 
 .day{
@@ -119,6 +230,24 @@ ol.carousel-indicators{
 
 .activities h3{
 	margin: 15px 0 30px 0; 
+}
+
+.activities .details{
+	padding: 0 15px 0 5px;
+}
+
+.activities h4{
+	margin: 0;
+}
+
+.activities p{
+	font-size: 1.2em;
+}
+
+#button{
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
 }
 
 div.bg-primary{
