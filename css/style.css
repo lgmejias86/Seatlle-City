@@ -1,5 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 h1, h2, h3 ,h4 ,p{
 	color: white;
+	font-family: 'Open Sans' sans-serif;
 }
 
 body{
@@ -7,7 +10,7 @@ body{
 }
 
 #first{
-	background: url(../img/first.jpg) no-repeat center center;
+	background: url(../img/first.jpg);
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -16,25 +19,67 @@ body{
 }
 
 .shadow{
-	background-color: rgba(30, 30, 30, 0.7);
+	background-color: rgba(40, 40, 40, 0.6);
 	height: 100%;
 	width: 100%;
 }
 
 #first .shadow.container-fluid{
 	position: relative;
+	display: table;
+}
+
+#first #crumb{
+	position: absolute;
+	left: 30px;
+	right: 30px;
+}
+
+#crumb .breadcrumb {
+	padding: 0;
+	margin-bottom: 0;
+	margin-top: 15px;
+	border-radius: 0;
+	background-color: transparent;
+	height: 0;
+	font-size: 0.9em;
+}
+
+#crumb .breadcrumb > li {
+  	display: inline-block;
+}
+
+#crumb .breadcrumb > li + li:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0 5px 5px;
+	border-color: transparent transparent transparent white;
+	color: white;
+	padding: 0;
+	top: 20px;
+}
+
+#crumb .breadcrumb a{
+	margin-left: 10px;
+	color: #777;
+}
+
+#crumb .breadcrumb .active a{
+  color: white;
+}
+
+#crumb .breadcrumb a:hover{
+  color: white;
+  text-decoration: none;
 }
 
 #first .container{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: auto;
-	margin: auto;
-	height: 30%;
-
+	display: table-cell;
+    vertical-align: middle;
+    width: auto;
 }
 
 #first .container>.row{
@@ -59,7 +104,8 @@ body{
 }
 
 #first #info{
-	margin: 40px 0;
+	margin-top: 40px;
+	margin-bottom: 40px;
 	padding: 0;
 }
 
@@ -88,7 +134,7 @@ button:hover{
     -o-background-size: cover;
     background-size: cover;
     height: 100vh;
-    min-height: 750px;
+    min-height: 780px;
 }
 
 #ind{
@@ -176,6 +222,10 @@ ol.carousel-indicators{
 
 	#carousel-example-generic div.carousel-inner div.item{
 		height: 100vh;
+	}
+
+	#crumb .breadcrumb{
+		text-align: center;
 	}
 }
 
@@ -266,7 +316,7 @@ ol.carousel-indicators{
 }
 
 .activities h4{
-	margin: 0;
+	margin: 0 0 5px 0;
 }
 
 .activities p{
@@ -299,9 +349,8 @@ ol.carousel-indicators{
 }
 
 @media (min-width: 768px) {
-	#columns2{
-		height: 100%;
-		bottom: 0px;
+	div.bg-primary{
+		height: 350px;
 	}
 }
 
@@ -319,3 +368,34 @@ div.bg-primary h3{
 div.bg-primary li{
 	margin-top: 10px;
 }
+
+#section3 #find-cruise{
+	margin: 20px 0;
+}
+
+#section3 #terms{
+	margin-bottom: 20px;
+}
+
+#terms p{
+	font-size: 1.2em;
+	color: rgb(100, 100, 100);
+}
+#share p{
+	font-size: 1.6em;
+	color: rgb(100, 100, 100);;
+}
+
+#section3 #share{
+	margin-top: 50px;
+}
+
+#share-buttons{
+	margin-bottom: 50px;
+}
+
+#section3 #share-buttons a{
+	height: 32px;
+	width: 32px;
+}
+
