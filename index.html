@@ -52,16 +52,16 @@
               <h3 class="text-center">YOUR ITINERARY</h3>
               <!-- Indicators -->
               <ol id="days" class="list-inline text-center">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active">Day 1</li>
-                <li data-target="#carousel-example-generic" data-slide-to="1">Day 2</li>
-                <li data-target="#carousel-example-generic" data-slide-to="2">Day 3</li>
-                <li data-target="#carousel-example-generic" data-slide-to="3">Day 4</li>
+                <li id="d0" data-target="#carousel-example-generic" to="0" class="checked">Day 1</li>
+                <li id="d1" data-target="#carousel-example-generic" to="1">Day 2</li>
+                <li id="d2" data-target="#carousel-example-generic" to="2">Day 3</li>
+                <li id="d3" data-target="#carousel-example-generic" to="3">Day 4</li>
               </ol>
               <ol class="carousel-indicators">
-                <li id="a0" data-target="#carousel-example-generic" data-slide-to="" class="active"><div class="join"></div></li>
-                <li id="a1" data-target="#carousel-example-generic"  data-slide-to=""><div class="join"></li>
-                <li id="a2" data-target="#carousel-example-generic" ><div class="join last"></li>
-                <li id="a3" data-target="#carousel-example-generic" data-slide-to=""></li>
+                <li id="c0" data-target="#carousel-example-generic" to="0" class="checked"></li>
+                <li id="c1" data-target="#carousel-example-generic" to="1"><div class="join"></div></li>
+                <li id="c2" data-target="#carousel-example-generic" to="2"><div class="join"></div></li>
+                <li id="c3" data-target="#carousel-example-generic" to="3"><div class="join last"></div></li>
               </ol>
             </div>
           </div>
@@ -158,10 +158,13 @@
       </div>
       <!-- Controls -->
     </div>
-    <div class="container-fluid">
-      <div class="container">
+    <div id="section3" class="container-fluid">
         <div class="row">
-          <h2 class="text-center text-primary"><u>Start your Alaska vacation before your ship even sails.</u></h2>
+          <div class="col-xs-12">
+            <h2 class="text-justify">Start your Alaska vacation before your ship even sails.</h2>
+          </div>
+        </div>
+        <div id="columns" class="row">
           <div class="col-xs-12 col-sm-6">
             <div class="bg-primary">
               <h3>WHAT'S INCLUDED</h3>
@@ -174,7 +177,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-6">
+          <div id="columns2" class="col-xs-12 col-sm-6">
             <div class="bg-primary">
               <h3>HOW TO BOOK</h3>
               <ul>
@@ -185,100 +188,65 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
-    <script>
-      /*$(document).ready(function(){
-        $(".carousel-indicators li").click(function(){
-          var a = $("#thumbnail1")[0];
-          a.addClass("next");
-          /*$("#thumbnail1").addClass("left");
-          $("#thumbnail0").removeClass("left");
-          $("#thumbnail1").removeClass("next");
-          $("#thumbnail1").removeClass("left");
-        });
-      });*/
-
-      
-      /*$(".carousel-indicators li").click(function(){
-         $("#carousel-example-generic").carousel(1);
-          $("#carousel-example-generic").carousel(2);
-        $("#carousel-example-generic").carousel(3);
-      });
-        /*$(".carousel-indicators li").click(function(){
-          //$("#carousel-example-generic").carousel("prev");
-          var active = parseInt($("#data-active")[0].innerHTML);
-          var currentActive = parseInt(this.id);
-          if((active<currentActive)&&(active+1<currentActive)){
-            $("#carousel-example-generic").carousel({duration: 10});
-            while(active<currentActive){
-              active++;
-              $("#carousel-example-generic").carousel(active);
-              //setTimeout(active++,100);
-            }
-          }
-          $("#data-active")[0].innerHTML = active;
-        });*/
-    </script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
     <script>
-      require(["dojo/dom", "dojo/query", "dojo/on", "dojo/dom-class", "dojo/fx", "dojo/dom-style", "dojo/dom-geometry", "dojo/domReady!"], function(dom, query, on, domClass, fx, style, geometry){
+      require(["dojo/dom", "dojo/query", "dojo/on", "dojo/dom-class", "dojo/fx", "dojo/dom-style", "dojo/dom-attr", "dojo/dom-geometry", "dojo/domReady!"], function(dom, query, on, domClass, fx, style, attr, geometry){
           // Add a class to some node:
           var s = dom.byId("thumbnail0");
-          query(".carousel-indicators li").on("click", function(){
-            var w =geometry.getContentBox(dom.byId("thumbnail0")).w;
-            var t = toString(w-1);
-            var f = 0-w*2;
-            w = 0-w;
-            style.set(dom.byId("thumbnail1"), {
-              display: "block",
-              position: "absolute",
-              top: "0",
-              width: "100%",
-              left: "100%"
-            });
-            style.set(dom.byId("thumbnail2"), {
-              display: "block",
-              position: "absolute",
-              top: "0",
-              width: "100%",
-              left: "200%"
-            });
-            //domClass.add(thumbnail1, "next");
-            var anim = fx.combine([
-              fx.slideTo({ node: dom.byId("thumbnail2"), top: "0", left: "0", duration: 1000}),
-              fx.slideTo({ node: dom.byId("thumbnail1"), top: "0", left: w, duration: 1000}),
-              fx.slideTo({ node: s, top: "0", left: f, duration: 1000, onEnd: function(){
-                domClass.remove(thumbnail0, "active");
-                style.set(dom.byId("thumbnail2"), {
-                  position: "relative",
-                  left: "0px"
-                });
-                domClass.add(thumbnail2, "active");
-                /*domClass.remove(thumbnail1, "next");
-                domClass.add(thumbnail1, "active");
-                domClass.remove(thumbnail0, "active");*/
-
+          query("#carousel-example-generic li").on("click", function(){
+            var width = geometry.getContentBox(dom.byId("thumbnail0")).w;
+            var numNext = parseInt(attr.get(this, "to"));
+            var numActive = -1;
+            var active = "";
+            for (var i = 0; i < 4; i++) {
+              if(domClass.contains("thumbnail"+i.toString(), "active")){
+                numActive = i;
+                active = "thumbnail"+i.toString();
+                break;
               }
-            })
+            };
+            magicNumber = numActive - numNext;
+            var anim = fx.combine([
+              fx.slideTo({ node: dom.byId("thumbnail3"), top: "0", left: (3+magicNumber-numActive)*width, duration: 500}),
+              fx.slideTo({ node: dom.byId("thumbnail2"), top: "0", left: (2+magicNumber-numActive)*width, duration: 500}),
+              fx.slideTo({ node: dom.byId("thumbnail1"), top: "0", left: (1+magicNumber-numActive)*width, duration: 500}),
+              fx.slideTo({ node: dom.byId("thumbnail0"), top: "0", left: (0+magicNumber-numActive)*width, duration: 500, 
+                beforeBegin: function(){
+                  for (var i = 0; i < 4; i++) {
+                    if(i<=numNext){
+                      domClass.add("c"+i.toString(), "checked");
+                      domClass.add("d"+i.toString(), "checked");
+                    }else{
+                      domClass.remove("c"+i.toString(), "checked");
+                      domClass.remove("d"+i.toString(), "checked");
+                    }
+                  };
+                },
+                onEnd: function(){
+                  domClass.remove(active, "active");
+                  domClass.add("thumbnail"+numNext.toString(), "active");
+                  
+                  style.set("thumbnail0",{
+                    left: ((0+magicNumber-numActive)*100).toString()+"%"
+                  });
+                  style.set("thumbnail1",{
+                    left: ((1+magicNumber-numActive)*100).toString()+"%"
+                  });
+                  style.set("thumbnail2",{
+                    left: ((2+magicNumber-numActive)*100).toString()+"%"
+                  });
+                  style.set("thumbnail3",{
+                    left: ((3+magicNumber-numActive)*100).toString()+"%"
+                  });
+                }
+              })
             ]);
             anim.play();
-            /*setTimeout(function(){
-              style.set(dom.byId("thumbnail1"), {
-                  left: "0"
-                });
-            }, 10000);*/
-              //if(anim.status()=="stopped"){
-                //domClass.remove(thumbnail0, "active");
-                //domClass.add(thumbnail1, "active");
-                //domClass.remove(thumbnail1, "next");
-                
-              //}
-            //}, 350);
           });
       });
     </script>
