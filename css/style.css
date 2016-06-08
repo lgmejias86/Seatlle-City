@@ -3,6 +3,7 @@
 h1, h2, h3 ,h4 ,p{
 	color: white;
 	font-family: 'Open Sans' sans-serif;
+	font-weight: 300;
 }
 
 body{
@@ -114,7 +115,7 @@ body{
 	line-height: 1.4;
 }
 
-button{
+.section-button{
 	color: white;
 	background-color: rgb(30, 180, 235);
 	padding: 10px 30px;
@@ -123,7 +124,7 @@ button{
 	transition: background-color .2s linear;
 }
 
-button:hover{
+.section-button:hover{
 	background-color: rgb(40, 140, 220);
 	transition: background-color .2s linear;
 }
@@ -317,6 +318,7 @@ ol.carousel-indicators{
 
 .activities h4{
 	margin: 0 0 5px 0;
+	font-weight: 600px;
 }
 
 .activities p{
@@ -378,12 +380,26 @@ div.bg-primary li{
 }
 
 #terms p{
-	font-size: 1.2em;
+	font-size: 1.4em;
+}
+
+#terms div{
+	display: inline-block;
+}
+
+#terms a{
+	text-decoration: none;
 	color: rgb(100, 100, 100);
 }
+
+
+#terms a:focus{
+	outline: none;
+}
+
 #share p{
 	font-size: 1.6em;
-	color: rgb(100, 100, 100);;
+	color: rgb(100, 100, 100);
 }
 
 #section3 #share{
@@ -394,8 +410,114 @@ div.bg-primary li{
 	margin-bottom: 50px;
 }
 
+#share-buttons a{
+	margin: 0 3px;
+}
+
 #section3 #share-buttons a{
 	height: 32px;
 	width: 32px;
 }
+
+#section3 #share-buttons a:focus{
+	outline: none;
+}
+
+#modal-terms p{
+	color: black;
+	font-size: 0.9em;
+	font-family: arial;
+	font-weight: lighter;
+}
+
+#modal-terms .modal-header{
+	border: none;
+}
+
+#modal-terms .modal-header button span{
+	font-size: 1.5em;
+	color: black;
+	font-weight: lighter;
+}
+
+#modal-terms button {
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+opacity: 1;
+}
+
+
+#modal-terms button:hover {
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+
+#modal-terms button:focus{
+	outline:none;
+}
+
+#modal-share{
+	font-family: arial;
+}
+
+#modal-share .modal-content{
+	background-color: rgb(210, 210, 210);
+	border-width: 7px;
+	border-color: rgb(210, 210, 210);
+	width: 474px;
+	margin: auto;
+}
+
+#modal-share .modal-header{
+	padding: 0;
+	
+}
+
+#modal-share .modal-header h4{
+	font-family: arial;
+	font-size: 1.4em;
+	margin: 0;
+	color: rgba(0,0,0, 0.6);
+}
+
+#modal-share .modal-header button{
+	opacity: 1;
+}
+
+#modal-share .modal-header button span{
+	font-size: 0.5em;
+	color: rgb(0, 120, 150);
+}
+
+#modal-share .modal-header button span:hover{
+	text-decoration: underline;
+}
+
+#modal-share .modal-body{
+	background-color: white;
+	padding: 30px;
+}
+
+
+
+#modal-share #icons{
+	background-image: url(http://w.sharethis.com/images/emailShare/external-email-sprite.png);
+	background-color: white;
+	margin: bottom: 3px;
+	width: 400px;
+}
+
+#modal-share #icons a{
+	display: inline-block;
+}
+
+#modal-share #icons div{
+	height: 100px;
+	width: 100px;
+	
+}
+
 

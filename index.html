@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="text-center">
-            <button id="see-itinerary">SEE THE ITINERARY</button>
+            <button id="see-itinerary" class="section-button">SEE THE ITINERARY</button>
           </div>
         </div>
       </div>
@@ -162,7 +162,7 @@
         </div>
       </div>
       <div id="button" class="text-center">
-        <button>HOW TO BOOK</button>
+        <button class="section-button">HOW TO BOOK</button>
       </div>
       <!-- Controls -->
     </div>
@@ -198,11 +198,13 @@
         </div>
         <div id="find-cruise" class="text-center">
           <a href="http://www.celebritycruises.com/cruise-search/search-results">
-            <button>FIND YOUR CRUISE</button>
+            <button class="section-button">FIND YOUR CRUISE</button>
           </a>
         </div>
         <div id="terms" class="text-center">
-          <p>Terms & Conditions</p>
+          <div>
+            <a data-toggle="modal" href="" data-target="#modal-terms">Terms & Conditions</a>
+          </div>
         </div>
         <div id="share" class="text-center">
           <p>Share the Seattle City Stay</p>
@@ -212,25 +214,58 @@
             <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
                 <img src="http://w.sharethis.com/images/facebook_32.png" alt="Facebook" />
             </a>
-            <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+            <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
                 <img src="http://w.sharethis.com/images/twitter_32.png" alt="twitter" />
             </a>
-            <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+            <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
                 <img src="http://w.sharethis.com/images/googleplus_32.png" alt="googleplus" />
             </a>
-            <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+            <a id="email" data-toggle="modal" href="#modal-share" data-target="#modal-share" target="_blank">
                 <img src="http://w.sharethis.com/images/email_32.png" alt="email" />
             </a>
           </div>
         </div>
     </div>
+
+    <div id="modal-terms" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <p>*Terms and conditions vary for each package. For complete details on individual packages, call 1-800-647-2251. Each Package is per person and must be purchased by each guest occupying a stateroom. Some Packages are limited to double occupancy. Package is subject to availability and may sell out. Packages include Offer Cruise, 3 nights stay in a 4-star hotel (selected by Celebrity Cruises), full-day city highlights tour, and half-day event with evening dinner, Internet usage terms apply]. The following Package Cancellation schedule and fees apply (days prior to travel departure date): 180 or more days = no penalty; 120 to 180 days = $450; 90 to 119 days = 25% of total price less taxes and fees; 60 to 89 days = 50% of total price less taxes and fees; 21 to 59 days = 80% of total price less taxes and fees; and 21 days or less = No refund less taxes and fees.</p>
+            <p>Package components cannot be substituted or changed, and are non-refundable and non-transferrable. Unless stated otherwise, Package applies to new individual bookings, may be combinable with other price programs, promotions or discounted rates (visit celebritycruises.com for combinable offers), and may be withdrawn at any time. Single occupancy guests are eligible for Package, subject to additional charge. Celebrity Cruises reserves the right to correct any errors, inaccuracies, or omissions and to change or update fares, fees, and surcharges at any time without prior notice. Refer to the <a href="http://www.celebritycruises.com/media/en_US/pdf/cruise_ticket_contract/Celebrity_Ticket_Contract_3_28_11.pdf">Cruise Ticket Contract</a> for additional terms and conditions.</p>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="modal-share" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close</span></button>
+            <h4>Select your email service</h4>
+          </div>
+          <div class="modal-body">
+            <div id="icons">
+              <a href="https://www.google.com/intl/en/mail/help/about.html" target="_blank"><div id="google"></div></a>
+              <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank"><div id="yahoo"></div></a>
+              <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=12&ct=1465410640&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fmail.live.com%2Fdefault.aspx%3Frru%3Dcompose%26subject%3DSeattle%2BCity%2BStay%2B%257c%2BCruise%2BVacation%2BPackages%2B%257c%2BCelebrity%2BCruises%26to%3D%26body%3Dhttps%253a%252f%252fshar.es%252f1JqyQ3%253cbr%253e%253cbr%253eAdd%2Ba%2BCelebrity%2BCity%2BStay%2Bto%2Byour%2BCelebrity%2Bcruise%2Band%2Bexperience%2BSeattle%2Bfor%2Bthree%2Bglorious%2Bdays%2Band%2Bnights%2Bbefore%2Byou%2Bset%2Bsail.%253cbr%253e%253cbr%253eThis%2Bmessage%2Bwas%2Bsent%2Busing%2BShareThis%2B%255bhttp%253a%252f%252fwww.sharethis.com%255d&lc=1033&id=64855&mkt=en-us&cbcxt=mai" target="_blank"><div id="yahoo"></div></a>
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-
+    
     <script>
-      require(["dojo/dom", "dojo/query", "dojo/on", "dojo/dom-class", "dojo/fx", "dojo/dom-style", "dojo/dom-attr", "dojo/dom-geometry", "dojox/timing/_base", "dojo/domReady!"], function(dom, query, on, domClass, fx, style, attr, geometry){
+      require(["dojo/dom", "dojo/query", "dojo/on", "dojo/mouse", "dojo/dom-class", "dojo/fx", "dojo/dom-style", "dojo/dom-attr", "dojo/dom-geometry", "dojox/timing/_base", "dojo/domReady!"], function(dom, query, on, mouse, domClass, fx, style, attr, geometry){
           query("#carousel-example-generic li").on("click", function(){
             var width = geometry.getContentBox(dom.byId("thumbnail0")).w;
             var numNext = parseInt(attr.get(this, "to"));
@@ -296,7 +331,7 @@
               bod.scrollTop=geometry.position(dom.byId("carousel-example-generic"), true).y;
             }
             t.start();
-        })
+        });
         query("#button").on("click", function(){
           var bod = query("body")[0];
             var sc = window.scrollY;
@@ -312,8 +347,12 @@
               bod.scrollTop=geometry.position(dom.byId("section3"), true).y;
             }
             t.start();
-        })
+        });
+        query("#email").on(mouse.enter, function(){
+          dom.byId("email").click();
+        });
       });
     </script>
+
   </body>
 </html>
